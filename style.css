@@ -1,0 +1,175 @@
+
+body{
+    color: white;
+    background-color:rgb(129, 25, 103);
+}
+.product-box{
+    width:100%;
+    border:5px outset black;
+    border-radius:10px;
+    background-color: rgb(156, 25, 124);
+    color: white;
+    padding:10px;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    gap:5px;
+
+
+
+
+}
+.product-heading{
+    border:5px outset;
+    border-radius:10px;
+
+    
+}
+
+.product-heading h2 img{
+    height:30px;
+    width:30px;
+
+}
+.product-heading h2{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    padding:10px;
+    gap:10px;
+    font-size:40px;
+}
+
+
+.product-heading h3{
+    padding:10px;
+    font-size:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+
+}
+
+.product-heading h3 button{
+    padding:10px 30px;
+    border-radius:30px;
+    border: none;
+
+    background:black;
+    color:white;
+    cursor: pointer;
+    position: relative;
+
+    background: linear-gradient(
+        90deg,
+        rgb(230, 97, 97),
+        rgb(221, 136, 57),
+        rgb(17, 206, 206),
+        rgb(13, 187, 13),
+        rgb(0, 204, 255)
+    );
+    background-size: 300% 100%;
+
+    animation: rgbBackground 4s linear infinite;
+
+
+}
+
+
+.product-info{
+
+    background-color: rgba(128, 128, 128, 0.699);
+    text-align: center;
+    color: white;
+    font-size:20px;
+    margin:10px;
+    border-bottom:4px solid rgb(9, 191, 236);
+    border-radius:20px;
+}
+.product-btn{
+    padding:5px;
+    display: flex;
+    justify-content: space-between;
+
+
+
+
+}
+.product-btn button{
+    padding:10px;
+    display: flex;
+    gap:5px;
+    border-radius:10px;
+    align-items: center;
+}
+
+.rgb-btn{
+    background:black;
+    color:white;
+    cursor: pointer;
+    position: relative;
+
+    background: linear-gradient(
+        90deg,
+        rgb(230, 97, 97),
+        rgb(221, 136, 57),
+        rgb(17, 206, 206),
+        rgb(13, 187, 13),
+        rgb(0, 204, 255)
+    );
+    background-size: 300% 100%;
+
+    animation: rgbBackground 4s linear infinite;
+}
+@keyframes rgbBackground {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+.product-btn button img{
+    height:20px;
+    width:20px;
+}
+.product{
+    border:5px outset white;
+    border-radius:10px;
+    display: grid;
+    height:60vh;
+    margin:10px;
+
+    align-content: end;
+}
+
+@media(max-width:768px){
+    .product{
+        height:50vh;
+        margin:5px;
+    }
+    .products{
+        display: grid;
+        justify-content:center;
+        gap:20px;
+        align-items: center;
+
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width:1200px){
+    .product{
+        height:50vh;
+    }
+}
