@@ -6,7 +6,7 @@ body{
 .product-box{
     border:5px outset white;
     border-radius:10px;
-    padding:5px;
+    padding:5px; 
     background-color: rgb(190, 34, 151);
 }
 .product-heading{
