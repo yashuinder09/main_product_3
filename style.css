@@ -1,37 +1,24 @@
-
 body{
     color: white;
     background-color:rgb(129, 25, 103);
 }
+
 .product-box{
-    width:100%;
-    border:5px outset black;
+    border:5px outset white;
     border-radius:10px;
-    background-color: rgb(156, 25, 124);
-    color: white;
-    padding:10px;
-}
-.products{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    justify-content: center;
-    gap:5px;
-
-
-
-
+    padding:5px;
+    background-color: rgb(190, 34, 151);
 }
 .product-heading{
     border:5px outset;
     border-radius:10px;
+    background-color: rgb(230, 45, 183);
 
-    
 }
-
 .product-heading h2 img{
     height:30px;
     width:30px;
-
+    border:1px solid;
 }
 .product-heading h2{
     justify-content: center;
@@ -42,8 +29,6 @@ body{
     gap:10px;
     font-size:40px;
 }
-
-
 .product-heading h3{
     padding:10px;
     font-size:30px;
@@ -79,52 +64,6 @@ body{
 
 }
 
-
-.product-info{
-
-    background-color: rgba(128, 128, 128, 0.699);
-    text-align: center;
-    color: white;
-    font-size:20px;
-    margin:10px;
-    border-bottom:4px solid rgb(9, 191, 236);
-    border-radius:20px;
-}
-.product-btn{
-    padding:5px;
-    display: flex;
-    justify-content: space-between;
-
-
-
-
-}
-.product-btn button{
-    padding:10px;
-    display: flex;
-    gap:5px;
-    border-radius:10px;
-    align-items: center;
-}
-
-.rgb-btn{
-    background:black;
-    color:white;
-    cursor: pointer;
-    position: relative;
-
-    background: linear-gradient(
-        90deg,
-        rgb(230, 97, 97),
-        rgb(221, 136, 57),
-        rgb(17, 206, 206),
-        rgb(13, 187, 13),
-        rgb(0, 204, 255)
-    );
-    background-size: 300% 100%;
-
-    animation: rgbBackground 4s linear infinite;
-}
 @keyframes rgbBackground {
 
     0% {
@@ -140,36 +79,81 @@ body{
     }
 }
 
-.product-btn button img{
+
+.products{
+    border:1px solid green;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:50px;
+    padding:10px;
+}
+
+.product{
+    border:4px outset white;
+    background-color: rgb(230, 45, 183);
+    border-radius:10px;
+    width:100%;
+    height:400px;
+    display:grid;
+    align-content: end;
+}
+.product-info{
+    height:150px;
+background-color:rgba(184, 32, 146, 0.644);
+    border-bottom:4px solid purple;
+    border-radius:10px;
+
+    display: grid;
+    justify-content: center;
+
+    margin:10px;
+
+}
+
+.product-btn{
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+}
+.product-btn img{
+    border:1px solid;
     height:20px;
     width:20px;
 }
-.product{
-    border:5px outset white;
-    border-radius:10px;
-    display: grid;
-    height:60vh;
-    margin:10px;
-
-    align-content: end;
+.product-btn button{
+    padding:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    border-radius:20px;
 }
 
 @media(max-width:768px){
-    .product{
-        height:50vh;
-        margin:5px;
-    }
     .products{
-        display: grid;
-        justify-content:center;
-        gap:20px;
-        align-items: center;
-
+        padding:10px;
+        gap: 20px;
         grid-template-columns: repeat(2,1fr);
+
     }
-}
-@media(max-width:1200px){
     .product{
-        height:50vh;
+        width:100%;
+
+    }
+    .product-btn button{
+        display: grid;
+        justify-items: center;
+    }
+
+}
+
+@media(max-width:384px){
+    .products{
+        justify-items: center;
+        grid-template-columns:1fr;
+    }
+    .product{
+        width:80%;
     }
 }
